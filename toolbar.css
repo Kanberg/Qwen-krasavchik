@@ -1,0 +1,483 @@
+/* Toolbar Component Styles */
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    gap: var(--space-md);
+}
+
+.toolbar-left,
+.toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.toolbar-center {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    flex: 1;
+    justify-content: center;
+}
+
+.toolbar-group {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: 0 var(--space-sm);
+    border-right: 1px solid var(--border-color);
+}
+
+.toolbar-group:last-child {
+    border-right: none;
+}
+
+/* Toolbar Buttons */
+.toolbar-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    background: transparent;
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    position: relative;
+}
+
+.toolbar-btn:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    transform: translateY(-1px);
+}
+
+.toolbar-btn:active {
+    transform: translateY(0);
+}
+
+.toolbar-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.toolbar-btn:disabled:hover {
+    background: transparent;
+    color: var(--text-secondary);
+}
+
+.toolbar-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.toolbar-btn .btn-icon {
+    font-size: var(--font-size-lg);
+    width: 20px;
+    text-align: center;
+}
+
+.toolbar-btn .btn-text {
+    white-space: nowrap;
+}
+
+/* Toolbar Dropdowns */
+.toolbar-dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    background: transparent;
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+}
+
+.dropdown-btn:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.dropdown-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.dropdown-arrow {
+    font-size: var(--font-size-xs);
+    transition: transform 0.2s ease;
+}
+
+.dropdown-btn.open .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    min-width: 200px;
+    z-index: 100;
+    animation: slideDown 0.2s ease;
+    margin-top: var(--space-xs);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: background 0.2s ease;
+    font-size: var(--font-size-sm);
+}
+
+.dropdown-item:hover {
+    background: var(--bg-tertiary);
+}
+
+.dropdown-item:active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.dropdown-item .item-icon {
+    width: 16px;
+    text-align: center;
+    font-size: var(--font-size-md);
+}
+
+.dropdown-separator {
+    height: 1px;
+    background: var(--border-color);
+    margin: var(--space-xs) 0;
+}
+
+/* Toolbar Search */
+.toolbar-search {
+    position: relative;
+    min-width: 200px;
+}
+
+.toolbar-search input {
+    width: 100%;
+    padding: var(--space-sm) var(--space-md) var(--space-sm) var(--space-xl);
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    color: var(--text-primary);
+    font-size: var(--font-size-sm);
+    transition: all 0.2s ease;
+}
+
+.toolbar-search input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
+}
+
+.toolbar-search .search-icon {
+    position: absolute;
+    left: var(--space-sm);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: var(--font-size-sm);
+}
+
+/* Toolbar Badges */
+.toolbar-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: var(--danger-color);
+    color: white;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    font-size: var(--font-size-xs);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 2s infinite;
+}
+
+/* Toolbar Progress */
+.toolbar-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--border-color);
+    overflow: hidden;
+}
+
+.toolbar-progress-bar {
+    height: 100%;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+    animation: progressAnimation 2s ease-in-out infinite;
+}
+
+@keyframes progressAnimation {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Toolbar Split Buttons */
+.toolbar-split-btn {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.split-btn-main {
+    padding: var(--space-sm) var(--space-md);
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: var(--font-size-sm);
+}
+
+.split-btn-dropdown {
+    padding: var(--space-sm);
+    background: transparent;
+    border: none;
+    border-left: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.split-btn-main:hover,
+.split-btn-dropdown:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+/* Toolbar Toggle Buttons */
+.toolbar-toggle {
+    display: flex;
+    background: var(--bg-tertiary);
+    border-radius: var(--border-radius);
+    padding: var(--space-xs);
+    gap: var(--space-xs);
+}
+
+.toggle-btn {
+    padding: var(--space-sm) var(--space-md);
+    background: transparent;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: var(--font-size-sm);
+    white-space: nowrap;
+}
+
+.toggle-btn:hover {
+    background: var(--bg-card);
+    color: var(--text-primary);
+}
+
+.toggle-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Toolbar Responsive */
+@media (max-width: 1024px) {
+    .toolbar-btn .btn-text {
+        display: none;
+    }
+    
+    .toolbar-btn {
+        padding: var(--space-sm);
+    }
+    
+    .toolbar-group {
+        gap: var(--space-xs);
+        padding: 0 var(--space-xs);
+    }
+    
+    .toolbar-search {
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .toolbar-center {
+        display: none;
+    }
+    
+    .toolbar-btn .btn-text {
+        display: none;
+    }
+    
+    .dropdown-btn .btn-text {
+        display: none;
+    }
+    
+    .toolbar-search {
+        min-width: 120px;
+    }
+    
+    .toolbar-group {
+        border-right: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .toolbar-search {
+        display: none;
+    }
+    
+    .toolbar-left,
+    .toolbar-right {
+        gap: var(--space-xs);
+    }
+    
+    .toolbar-btn {
+        padding: var(--space-xs);
+    }
+    
+    .toolbar-btn .btn-icon {
+        font-size: var(--font-size-md);
+    }
+}
+
+/* Toolbar Themes */
+.toolbar-theme-dark {
+    --toolbar-bg: var(--bg-secondary);
+    --toolbar-border: var(--border-color);
+    --toolbar-text: var(--text-secondary);
+    --toolbar-text-hover: var(--text-primary);
+    --toolbar-bg-hover: var(--bg-tertiary);
+    --toolbar-bg-active: var(--primary-color);
+}
+
+.toolbar-theme-light {
+    --toolbar-bg: #f8fafc;
+    --toolbar-border: #e2e8f0;
+    --toolbar-text: #64748b;
+    --toolbar-text-hover: #1e293b;
+    --toolbar-bg-hover: #e2e8f0;
+    --toolbar-bg-active: var(--primary-color);
+}
+
+/* Toolbar Animations */
+.toolbar-btn-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.toolbar-btn-success {
+    color: var(--success-color) !important;
+}
+
+.toolbar-btn-error {
+    color: var(--danger-color) !important;
+}
+
+.toolbar-btn-warning {
+    color: var(--warning-color) !important;
+}
+
+/* Toolbar Keyboard Shortcuts */
+.toolbar-shortcut {
+    font-size: var(--font-size-xs);
+    color: var(--text-muted);
+    margin-left: var(--space-sm);
+    padding: 2px 6px;
+    background: var(--bg-tertiary);
+    border-radius: var(--border-radius-sm);
+    font-family: 'Fira Code', monospace;
+}
+
+/* Toolbar Tooltips */
+.toolbar-tooltip {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-xs);
+    white-space: nowrap;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    box-shadow: var(--shadow-md);
+}
+
+.toolbar-btn:hover .toolbar-tooltip {
+    opacity: 1;
+}
+
+/* Toolbar Loading States */
+.toolbar-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.toolbar-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+      }
