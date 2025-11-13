@@ -1,0 +1,242 @@
+/* Light Theme Variables */
+[data-theme="light"] {
+    /* Primary Colors */
+    --primary-color: #6366f1;
+    --primary-dark: #4f46e5;
+    --primary-light: #8b5cf6;
+    
+    /* Semantic Colors */
+    --secondary-color: #059669;
+    --accent-color: #d97706;
+    --danger-color: #dc2626;
+    --warning-color: #d97706;
+    --success-color: #059669;
+    --info-color: #2563eb;
+    
+    /* Background Colors */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #f1f5f9;
+    --bg-card: #e2e8f0;
+    --bg-overlay: rgba(255, 255, 255, 0.8);
+    
+    /* Text Colors */
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --text-disabled: #94a3b8;
+    --text-inverse: #ffffff;
+    
+    /* Border Colors */
+    --border-color: #cbd5e1;
+    --border-light: #e2e8f0;
+    --border-dark: #94a3b8;
+    --border-focus: #6366f1;
+    
+    /* Shadow Colors */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --shadow-sm: 0 1px 2px 0 var(--shadow-color);
+    --shadow-md: 0 4px 6px -1px var(--shadow-color), 0 2px 4px -1px var(--shadow-color);
+    --shadow-lg: 0 10px 15px -3px var(--shadow-color), 0 4px 6px -2px var(--shadow-color);
+    --shadow-xl: 0 20px 25px -5px var(--shadow-color), 0 10px 10px -5px var(--shadow-color);
+    
+    /* Gradient Colors */
+    --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    --gradient-secondary: linear-gradient(135deg, #059669 0%, #047857 100%);
+    --gradient-accent: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    --gradient-light: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+/* Light Theme Specific Styles */
+[data-theme="light"] body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .modal {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+}
+
+[data-theme="light"] .modal-content {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-xl);
+}
+
+[data-theme="light"] .btn-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+[data-theme="light"] .btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+[data-theme="light"] .btn-secondary {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+[data-theme="light"] .btn-secondary:hover {
+    background: var(--bg-card);
+    border-color: var(--border-dark);
+}
+
+[data-theme="light"] .header {
+    background: var(--bg-primary);
+    border-bottom-color: var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+[data-theme="light"] .sidebar {
+    background: var(--bg-secondary);
+    border-right-color: var(--border-color);
+}
+
+[data-theme="light"] .editor-area {
+    background: var(--bg-primary);
+}
+
+[data-theme="light"] .editor-tabs {
+    background: var(--bg-secondary);
+    border-bottom-color: var(--border-color);
+}
+
+[data-theme="light"] .editor-tab {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .editor-tab.active {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+[data-theme="light"] .preview-panel {
+    background: var(--bg-secondary);
+    border-left-color: var(--border-color);
+}
+
+[data-theme="light"] .terminal-panel {
+    background: var(--bg-secondary);
+    border-top-color: var(--border-color);
+}
+
+[data-theme="light"] .status-bar {
+    background: var(--bg-secondary);
+    border-top-color: var(--border-color);
+}
+
+/* Light Theme Scrollbars */
+[data-theme="light"] ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-track {
+    background: var(--bg-tertiary);
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+    background: var(--border-dark);
+}
+
+/* Light Theme Code Editor */
+[data-theme="light"] .monaco-editor {
+    --vscode-editor-background: var(--bg-primary);
+    --vscode-editor-foreground: var(--text-primary);
+    --vscode-editor-selectionBackground: rgba(99, 102, 241, 0.2);
+    --vscode-editorCursor-foreground: var(--primary-color);
+    --vscode-editorLineNumber-foreground: var(--text-muted);
+    --vscode-editorLineNumber-activeForeground: var(--text-primary);
+    --vscode-editorGutter-background: var(--bg-primary);
+}
+
+/* Light Theme Terminal */
+[data-theme="light"] .terminal-container {
+    --terminal-bg: #f8fafc;
+    --terminal-fg: #334155;
+    --terminal-cursor: var(--primary-color);
+    --terminal-selection: #cbd5e1;
+}
+
+/* Light Theme Syntax Highlighting */
+[data-theme="light"] .token.comment,
+[data-theme="light"] .token.prolog,
+[data-theme="light"] .token.doctype,
+[data-theme="light"] .token.cdata {
+    color: #64748b;
+}
+
+[data-theme="light"] .token.punctuation {
+    color: #475569;
+}
+
+[data-theme="light"] .token.property,
+[data-theme="light"] .token.tag,
+[data-theme="light"] .token.boolean,
+[data-theme="light"] .token.number,
+[data-theme="light"] .token.constant,
+[data-theme="light"] .token.symbol,
+[data-theme="light"] .token.deleted {
+    color: #dc2626;
+}
+
+[data-theme="light"] .token.selector,
+[data-theme="light"] .token.attr-name,
+[data-theme="light"] .token.string,
+[data-theme="light"] .token.char,
+[data-theme="light"] .token.builtin,
+[data-theme="light"] .token.inserted {
+    color: #059669;
+}
+
+[data-theme="light"] .token.operator,
+[data-theme="light"] .token.entity,
+[data-theme="light"] .token.url,
+[data-theme="light"] .language-css .token.string,
+[data-theme="light"] .style .token.string {
+    color: #d97706;
+}
+
+[data-theme="light"] .token.atrule,
+[data-theme="light"] .token.attr-value,
+[data-theme="light"] .token.keyword {
+    color: #6366f1;
+}
+
+[data-theme="light"] .token.function,
+[data-theme="light"] .token.class-name {
+    color: #8b5cf6;
+}
+
+[data-theme="light"] .token.regex,
+[data-theme="light"] .token.important,
+[data-theme="light"] .token.variable {
+    color: #d97706;
+}
+
+/* Light Theme Focus States */
+[data-theme="light"] *:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Light Theme Selection */
+[data-theme="light"] ::selection {
+    background: rgba(99, 102, 241, 0.2);
+    color: var(--text-primary);
+}
+
+[data-theme="light"] ::-moz-selection {
+    background: rgba(99, 102, 241, 0.2);
+    color: var(--text-primary);
+  }
