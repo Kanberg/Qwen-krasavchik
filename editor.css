@@ -1,0 +1,446 @@
+/* Editor Component Styles */
+.code-editor {
+    font-family: 'Fira Code', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+/* Monaco Editor Overrides */
+.monaco-editor {
+    font-family: 'Fira Code', 'Monaco', 'Menlo', 'Ubuntu Mono', monospace !important;
+}
+
+.monaco-editor .view-overlays .current-line {
+    border: none !important;
+    background-color: rgba(99, 102, 241, 0.1) !important;
+}
+
+.monaco-editor .margin {
+    background-color: var(--bg-primary) !important;
+}
+
+.monaco-editor .line-numbers {
+    color: var(--text-muted) !important;
+}
+
+.monaco-editor .current-line ~ .line-numbers {
+    color: var(--text-primary) !important;
+    font-weight: 600;
+}
+
+/* Editor Suggestions */
+.monaco-editor .suggest-widget {
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--border-radius) !important;
+}
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row {
+    color: var(--text-primary) !important;
+}
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row.focused {
+    background: var(--primary-color) !important;
+    color: white !important;
+}
+
+/* Editor Hover */
+.monaco-editor-hover {
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--border-radius) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Editor Minimap */
+.monaco-editor .minimap {
+    background: var(--bg-tertiary) !important;
+}
+
+/* Editor Cursor */
+.monaco-editor .cursors-layer .cursor {
+    background: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+/* Editor Selection */
+.monaco-editor .focused .selected-text {
+    background: rgba(99, 102, 241, 0.3) !important;
+}
+
+/* Editor Bracket Matching */
+.monaco-editor .bracket-match {
+    background: rgba(99, 102, 241, 0.2) !important;
+    border: 1px solid var(--primary-color) !important;
+}
+
+/* Editor Error Markers */
+.monaco-editor .squiggly-error {
+    border-bottom: 2px wavy var(--danger-color) !important;
+}
+
+.monaco-editor .squiggly-warning {
+    border-bottom: 2px wavy var(--warning-color) !important;
+}
+
+.monaco-editor .squiggly-info {
+    border-bottom: 2px wavy var(--primary-color) !important;
+}
+
+/* Editor Inline Suggestions */
+.monaco-editor .inline-suggestion {
+    color: var(--text-muted) !important;
+    font-style: italic;
+}
+
+/* Editor Gutter */
+.monaco-editor .glyph-margin {
+    background: var(--bg-primary) !important;
+}
+
+.monaco-editor .line-numbers.active-line-number {
+    color: var(--primary-color) !important;
+    font-weight: bold;
+}
+
+/* Editor Scrollbar */
+.monaco-editor .scrollbar {
+    background: transparent !important;
+}
+
+.monaco-editor .scrollbar .slider {
+    background: var(--border-color) !important;
+    border-radius: 4px !important;
+}
+
+.monaco-editor .scrollbar .slider:hover {
+    background: var(--border-light) !important;
+}
+
+/* Editor Find Widget */
+.monaco-editor .find-widget {
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--border-radius) !important;
+}
+
+.monaco-editor .find-widget input {
+    background: var(--bg-tertiary) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Editor Parameter Hints */
+.monaco-editor .parameter-hints-widget {
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--border-radius) !important;
+}
+
+.monaco-editor .parameter-hints-widget .signature {
+    color: var(--text-primary) !important;
+}
+
+/* Editor Overview Ruler */
+.monaco-editor .decorationsOverviewRuler {
+    background: var(--bg-tertiary) !important;
+}
+
+/* Editor Word Highlight */
+.monaco-editor .wordHighlight {
+    background: rgba(99, 102, 241, 0.2) !important;
+}
+
+.monaco-editor .wordHighlightStrong {
+    background: rgba(99, 102, 241, 0.3) !important;
+}
+
+/* Editor Indent Guide */
+.monaco-editor .indent-guide {
+    border-left: 1px solid var(--border-color) !important;
+    opacity: 0.3;
+}
+
+.monaco-editor .indent-guide.active {
+    border-left: 1px solid var(--primary-color) !important;
+    opacity: 0.6;
+}
+
+/* Editor Bracket Pair Colorization */
+.monaco-editor .bracket-highlighting-0 {
+    color: var(--primary-color) !important;
+}
+
+.monaco-editor .bracket-highlighting-1 {
+    color: var(--secondary-color) !important;
+}
+
+.monaco-editor .bracket-highlighting-2 {
+    color: var(--accent-color) !important;
+}
+
+/* Editor Inlay Hints */
+.monaco-editor .inlay-hints {
+    color: var(--text-muted) !important;
+    font-style: italic;
+}
+
+/* Editor Custom Overlay */
+.editor-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.editor-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-muted);
+    font-size: var(--font-size-lg);
+    opacity: 0.1;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Editor Status Overlay */
+.editor-status {
+    position: absolute;
+    bottom: var(--space-sm);
+    right: var(--space-sm);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--space-xs) var(--space-sm);
+    font-size: var(--font-size-xs);
+    color: var(--text-muted);
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* Editor Loading State */
+.editor-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--text-muted);
+    font-size: var(--font-size-lg);
+}
+
+.editor-loading::after {
+    content: '⚡';
+    margin-left: var(--space-sm);
+    animation: spin 1s linear infinite;
+}
+
+/* Editor Error Display */
+.editor-errors {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(239, 68, 68, 0.1);
+    border-top: 1px solid var(--danger-color);
+    padding: var(--space-sm);
+    font-size: var(--font-size-sm);
+    color: var(--danger-color);
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+.editor-errors .error-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xs);
+}
+
+.editor-errors .error-item:last-child {
+    margin-bottom: 0;
+}
+
+.error-icon {
+    font-size: var(--font-size-sm);
+    flex-shrink: 0;
+}
+
+.error-message {
+    flex: 1;
+}
+
+.error-line {
+    color: var(--text-muted);
+    font-size: var(--font-size-xs);
+}
+
+/* Editor AI Suggestions */
+.editor-ai-suggestions {
+    position: absolute;
+    right: var(--space-sm);
+    top: var(--space-sm);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--space-sm);
+    max-width: 300px;
+    box-shadow: var(--shadow-lg);
+    z-index: 20;
+    animation: slideInRight 0.3s ease;
+}
+
+.ai-suggestion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-sm);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.ai-suggestion-content {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+    line-height: 1.4;
+}
+
+.ai-suggestion-actions {
+    display: flex;
+    gap: var(--space-sm);
+    margin-top: var(--space-sm);
+}
+
+/* Editor Collaborative Cursors */
+.collaborative-cursor {
+    position: absolute;
+    width: 2px;
+    background: var(--primary-color);
+    pointer-events: none;
+    z-index: 15;
+}
+
+.collaborative-cursor-label {
+    position: absolute;
+    background: var(--primary-color);
+    color: white;
+    padding: 2px 6px;
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-xs);
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 16;
+    transform: translateY(-100%);
+}
+
+/* Editor Search Highlight */
+.monaco-editor .findMatch {
+    background: rgba(245, 158, 11, 0.3) !important;
+    border: 1px solid var(--warning-color) !important;
+}
+
+.monaco-editor .currentFindMatch {
+    background: rgba(245, 158, 11, 0.5) !important;
+    border: 1px solid var(--warning-color) !important;
+}
+
+/* Editor Selection Highlight */
+.monaco-editor .selectionHighlight {
+    background: rgba(99, 102, 241, 0.2) !important;
+}
+
+/* Editor Rulers */
+.monaco-editor .view-ruler {
+    border-left: 1px solid var(--border-color) !important;
+    opacity: 0.3;
+}
+
+/* Editor Whitespace */
+.monaco-editor .monaco-editor .view-zones .view-lines .view-line span {
+    color: var(--text-muted) !important;
+}
+
+/* Editor Line Numbers */
+.monaco-editor .line-numbers {
+    font-feature-settings: "tnum" !important;
+}
+
+/* Editor Active Line */
+.monaco-editor .view-line.active-line {
+    background: rgba(99, 102, 241, 0.05) !important;
+}
+
+/* Editor Folded Code */
+.monaco-editor .folded-background {
+    background: rgba(99, 102, 241, 0.1) !important;
+}
+
+/* Editor Inline Completions */
+.monaco-editor .suggest-preview-text {
+    color: var(--text-muted) !important;
+    font-style: italic;
+}
+
+/* Editor Debugging */
+.monaco-editor .debug-breakpoint {
+    background: var(--danger-color) !important;
+    border-radius: 50% !important;
+}
+
+.monaco-editor .debug-current-line {
+    background: rgba(16, 185, 129, 0.2) !important;
+}
+
+/* Editor Custom Themes */
+.editor-theme-dark {
+    --editor-bg: var(--bg-primary);
+    --editor-text: var(--text-primary);
+    --editor-selection: rgba(99, 102, 241, 0.3);
+    --editor-cursor: var(--primary-color);
+    --editor-gutter: var(--bg-primary);
+    --editor-gutter-text: var(--text-muted);
+}
+
+.editor-theme-light {
+    --editor-bg: #ffffff;
+    --editor-text: #1f2937;
+    --editor-selection: rgba(99, 102, 241, 0.2);
+    --editor-cursor: var(--primary-color);
+    --editor-gutter: #f8fafc;
+    --editor-gutter-text: #6b7280;
+}
+
+/* Editor Responsive */
+@media (max-width: 768px) {
+    .editor-ai-suggestions {
+        max-width: 250px;
+        right: var(--space-xs);
+        top: var(--space-xs);
+    }
+    
+    .editor-status {
+        bottom: var(--space-xs);
+        right: var(--space-xs);
+        font-size: var(--font-size-xs);
+    }
+}
+
+/* Editor Print Styles */
+@media print {
+    .monaco-editor {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .monaco-editor .margin {
+        background: white !important;
+    }
+    
+    .editor-overlay,
+    .editor-status,
+    .editor-ai-suggestions {
+        display: none !important;
+    }
+}
